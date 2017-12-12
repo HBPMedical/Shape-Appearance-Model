@@ -1,0 +1,105 @@
+{
+    "tool-version": "unknown version", 
+    "name": "runPG",
+    "schema-version": "0.5", 
+    "command-line": "create_settings.py [FILE_NAMES] [K] [VX] [V_SETTINGS] [A_SETTINGS] [MU_SETTINGS] [MAXIT] [RESULT_NAME] [RESULT_DIR] [BATCH_SIZE] >& out.dat", 
+    "inputs": [
+        {
+            "description": "JSON file containing the file names.", 
+            "value-key": "[FILE_NAMES]", 
+            "type": "File", 
+            "list": false, 
+            "optional": false, 
+            "id": "file_names", 
+            "name": "File names"
+        }, 
+        {
+            "description": "Number of shape and appearance components.", 
+	    "default-value": 64,
+            "value-key": "[K]", 
+            "type": "Number", 
+	    "integer": true,
+            "id": "k", 
+            "name": "K"
+        }, 
+        {
+            "description": "Voxel sizes (mm - matches those of \"imported\" images).", 
+	    "default-value": "[1.5 1.5 1.5]",
+            "value-key": "[VX]", 
+            "type": "String", 
+            "id": "vx", 
+            "name": "vx"
+        }, 
+        {
+            "description": "Registration regularisation settings.",
+	    "default-value": "[1e-05,0.01,0.2,0.025,0.05]",
+            "value-key": "[V_SETTINGS]", 
+            "type": "String", 
+            "id": "v_settings", 
+            "name": "v_settings"
+        }, 
+        {
+            "description": "Appearance regularisation settings.",
+	    "default-value": "[0.01,1,0]",
+            "value-key": "[A_SETTINGS]", 
+            "type": "String", 
+            "id": "a_settings", 
+            "name": "a_settings"
+        }, 
+        {
+            "description": "Mean image regularisation settings.",
+	    "default-value": "[0.001,0.1,0]",
+            "value-key": "[MU_SETTINGS]", 
+            "type": "String", 
+            "id": "mu_settings", 
+            "name": "mu_settings"
+        }, 
+        {
+            "description": "Number of iterations.",
+	    "default-value": 8,
+            "value-key": "[MAXIT]", 
+            "type": "Number", 
+	    "integer": true,
+            "id": "maxit", 
+            "name": "maxit"
+        }, 
+        {
+            "description": "Name of results files.",
+	    "default-value": "result",
+            "value-key": "[RESULT_NAME]", 
+            "type": "String", 
+            "id": "result_name", 
+            "name": "Result name"
+        }, 
+        {
+            "description": "Results dir.",
+	    "default-value": "results",
+            "value-key": "[RESULT_DIR]", 
+            "type": "String", 
+            "id": "result_dir", 
+            "name": "Result directory"
+        }, 
+        {
+            "description": "Batch-size (for local parallelisation).",
+	    "default-value": 4,
+            "value-key": "[BATCH_SIZE]", 
+            "type": "Number", 
+            "integer": true,
+            "id": "batch_size", 
+            "name": "Batch size"
+        }
+    ], 
+    "output-files": [
+        {
+            "description": "Output folder", 
+            "id": "folder_out", 
+            "path-template": "[RESULT_DIR]", 
+            "name": "Output folder"
+        }
+    ],
+    "container-image": {
+            "image": "shots47s/shape-appear",
+            "type": "docker"
+    }, 
+    "description": "Combined Shape & Appearance Modelling of 3D volumes. The general idea is to take a bunch of 2D or 3D images and factorise them in a way that combines both shape and appearance."
+}

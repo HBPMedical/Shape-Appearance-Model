@@ -1,0 +1,13 @@
+{
+"file_names":"'filename.json'",
+"k":64,
+"vx":"'[1.5 1.5 1.5]'",
+"v_settings":"'[1e-05,0.01,0.2,0.025,0.05]'",
+"a_settings":"'[0.01,1,0]'",
+"mu_settings":"'[0.001,0.1,0]'",
+"maxit":8,
+"result_name":"'test'",
+"result_dir": "'results'",
+"batch_size":2
+}
+ 

@@ -1,0 +1,11 @@
+{
+  "K": __K__,                      
+  "vx": __VX__,                    
+  "v_settings": __V_SETTINGS__,    
+  "a_settings": __A_SETTINGS__,    
+  "mu_settings": __MU_SETTINGS__,  
+  "maxit": __MAXIT__,              
+  "result_name": "__RESULT_NAME__",
+  "result_dir": "__RESULT_DIR__",  
+  "batchsize": __BATCHSIZE__      
+}

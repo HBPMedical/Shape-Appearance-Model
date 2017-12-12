@@ -1,5 +1,5 @@
 
-compile_dir = fullfile(tempdir,'compiled');
+compile_dir = fullfile('boutiques');
 
 if ~exist('spm','file')
     error('SPM not on search path.');

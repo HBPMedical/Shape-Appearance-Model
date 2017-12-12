@@ -1,3 +1,7 @@
+# Boutiques based fork
+
+This fork of the original Shape Appearance Model provides additional capabilities to run the software with a boutiques descriptor through docker.  For information on how to run this, looking the boutiques directory for hte README
+
 # Combined Shape & Appearance Modelling of 3D volumes
 
 The general idea is to take a bunch of 2D or 3D images and factorise them in a way that combines both shape and appearance.  Code is written in MATLAB, and relies on functions from the [SPM12](http://www.fil.ion.ucl.ac.uk/spm/software/spm12/) software.
